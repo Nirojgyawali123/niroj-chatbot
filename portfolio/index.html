@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Niroj Gyawali — AI & Data Science</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- AMBIENT ORBS -->
+<div class="orbs">
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+  <div class="orb orb3"></div>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo" onclick="showPage('home')">N<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#" onclick="showPage('home')" data-page="home" class="active">Home</a></li>
+    <li><a href="#" onclick="showPage('about')" data-page="about">About</a></li>
+    <li><a href="#" onclick="showPage('projects')" data-page="projects">Projects</a></li>
+    <li><a href="#" onclick="showPage('contact')" data-page="contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ════════════════ HOME PAGE ════════════════ -->
+<div id="page-home" class="page active">
+  <div class="hero">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Available for collaboration
+      </div>
+      <h1 class="hero-title">
+        Hi, I'm <em>Niroj</em><br/>
+        Gyawali
+      </h1>
+      <p class="hero-desc">
+        BSc CSIT student passionate about Artificial Intelligence & Machine Learning. 
+        Building intelligent systems, exploring data, and organizing tech communities 
+        across Lumbini.
+      </p>
+      <div class="hero-actions">
+        <button class="btn btn-primary" onclick="showPage('projects')">
+          View Projects →
+        </button>
+        <button class="btn btn-outline" onclick="showPage('about')">
+          About Me
+        </button>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="avatar">NG</div>
+        <h3>Niroj Gyawali</h3>
+        <div class="role">AI/ML Enthusiast · CSIT Student</div>
+        <div class="stat-row">
+          <div class="stat">
+            <div class="stat-num">1st</div>
+            <div class="stat-label">Semester</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">∞</div>
+            <div class="stat-label">Curiosity</div>
+          </div>
+        </div>
+        <div class="skill-chips">
+          <span class="chip warm">Python</span>
+          <span class="chip green">Machine Learning</span>
+          <span class="chip purple">Deep Learning</span>
+          <span class="chip">Data Science</span>
+          <span class="chip green">AI Research</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll hint cards -->
+  <div class="section" style="padding-top:0">
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;">
+      <div class="project-card" onclick="showPage('about')" style="cursor:pointer">
+        <div class="project-thumb t1">🧑‍💻</div>
+        <div class="project-body">
+          <h3>About Me</h3>
+          <p>Get to know my background, skills, and what drives me in the world of AI.</p>
+          <span class="project-link">Read more →</span>
+        </div>
+      </div>
+      <div class="project-card" onclick="showPage('projects')">
+        <div class="project-thumb t2">🚀</div>
+        <div class="project-body">
+          <h3>My Projects</h3>
+          <p>Explore projects I've built ranging from ML models to community tech events.</p>
+          <span class="project-link">View all →</span>
+        </div>
+      </div>
+      <div class="project-card" onclick="showPage('contact')">
+        <div class="project-thumb t3">✉️</div>
+        <div class="project-body">
+          <h3>Get In Touch</h3>
+          <p>Have an idea or collaboration in mind? I'd love to hear from you.</p>
+          <span class="project-link">Contact →</span>
+        </div>
+      </div>
+      <div class="project-card" onclick="openChat()">
+        <div class="project-thumb t4">🤖</div>
+        <div class="project-body">
+          <h3>Chat With AI</h3>
+          <p>Ask my AI assistant anything about me, my work, or my interests.</p>
+          <span class="project-link">Start chat →</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Crafted with ❤️ by <span>Niroj Gyawali</span> · Lumbini, Nepal
+  </footer>
+</div>
+
+<!-- ════════════════ ABOUT PAGE ════════════════ -->
+<div id="page-about" class="page">
+  <div class="section">
+    <div class="section-label">The Person Behind the Code</div>
+    <h2 class="section-title">About Me</h2>
+    <p class="section-subtitle">A curious mind, a learner, a builder — driven by the limitless possibilities of AI.</p>
+
+    <div class="about-grid">
+      <div>
+        <div class="about-card">
+          <div class="about-avatar">NG</div>
+          <h2>Niroj Gyawali</h2>
+          <div class="role-tag">BSc CSIT · 1st Semester</div>
+          <ul class="info-list">
+            <li><span class="icon">📍</span> <div><strong>Location</strong><br/>Lumbini, Nepal</div></li>
+            <li><span class="icon">🎓</span> <div><strong>Education</strong><br/>BSc CSIT — 1st Semester</div></li>
+            <li><span class="icon">🔬</span> <div><strong>Interest</strong><br/>AI / ML & IT Projects</div></li>
+            <li><span class="icon">🎪</span> <div><strong>Role</strong><br/>Organizer, Lumbini Tech Month</div></li>
+            <li><span class="icon">🌐</span> <div><strong>Status</strong><br/>Open to collaboration</div></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="about-content">
+        <h3>Who I Am</h3>
+        <p>
+          I'm Niroj Gyawali, a first-semester BSc CSIT student with a deep passion for
+          Artificial Intelligence and Machine Learning. My journey into tech started with
+          curiosity — wondering how machines can learn, think, and solve real-world problems.
+        </p>
+        <p>
+          Beyond academics, I'm actively involved in building and nurturing a tech community
+          in Lumbini. As an organizer of <strong>Lumbini Tech Month</strong>, I help connect
+          students and professionals with learning opportunities in various IT fields.
+        </p>
+
+        <h3>Skills & Technologies</h3>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <div class="skill-name"><span>Python</span><span>85%</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name"><span>Machine Learning</span><span>75%</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name"><span>Data Analysis</span><span>70%</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name"><span>Deep Learning</span><span>60%</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:60%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name"><span>Web Development</span><span>65%</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:65%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name"><span>Git & GitHub</span><span>72%</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:72%"></div></div>
+          </div>
+        </div>
+
+        <h3>My Journey</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">2024 — Present</div>
+            <h4>BSc CSIT — 1st Semester</h4>
+            <p>Started my formal journey in Computer Science & IT, diving deep into programming, data structures, and emerging technologies.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2024 — Present</div>
+            <h4>Organizer · Lumbini Tech Month</h4>
+            <p>Co-organizing Lumbini Tech Month — a regional initiative that brings IT learning, workshops, and networking to participants across Lumbini Province.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2023 — Present</div>
+            <h4>Self-Learning AI & ML</h4>
+            <p>Independently studying machine learning, neural networks, and data science through online resources, projects, and experimentation.</p>
+          </div>
+        </div>
+
+        <h3>What Drives Me</h3>
+        <p>
+          I believe technology, especially AI, has the power to transform lives — particularly
+          in communities where access to quality education and resources is limited.
+          My goal is to bridge that gap by building tools, sharing knowledge, and creating
+          opportunities for others in the tech space.
+        </p>
+      </div>
+    </div>
+  </div>
+  <footer>Crafted with ❤️ by <span>Niroj Gyawali</span> · Lumbini, Nepal</footer>
+</div>
+
+<!-- ════════════════ PROJECTS PAGE ════════════════ -->
+<div id="page-projects" class="page">
+  <div class="section">
+    <div class="projects-header">
+      <div class="section-label">What I've Built</div>
+      <h2 class="section-title">Projects & Work</h2>
+      <p class="section-subtitle">A collection of projects I've built, contributed to, and explored as part of my learning journey.</p>
+    </div>
+
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-thumb t1">🧠</div>
+        <div class="project-body">
+          <div class="project-tags">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">ML</span>
+          </div>
+          <h3>Sentiment Analysis Model</h3>
+          <p>A Natural Language Processing project that classifies text sentiment using machine learning techniques and trained on custom datasets.</p>
+          <a href="#" class="project-link">View Project →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-thumb t2">📊</div>
+        <div class="project-body">
+          <div class="project-tags">
+            <span class="project-tag">Data Science</span>
+            <span class="project-tag">Pandas</span>
+          </div>
+          <h3>Data Visualization Dashboard</h3>
+          <p>An interactive dashboard for exploring datasets with clean charts, filters, and real-time analytics built with Python and visualization libraries.</p>
+          <a href="#" class="project-link">View Project →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-thumb t3">🌐</div>
+        <div class="project-body">
+          <div class="project-tags">
+            <span class="project-tag">Community</span>
+            <span class="project-tag">Event Tech</span>
+          </div>
+          <h3>Lumbini Tech Month</h3>
+          <p>Organized and managed the tech infrastructure for Lumbini Tech Month — a regional event empowering students with IT skills and community connections.</p>
+          <a href="#" class="project-link">Learn More →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-thumb t4">🤖</div>
+        <div class="project-body">
+          <div class="project-tags">
+            <span class="project-tag">AI</span>
+            <span class="project-tag">Chatbot</span>
+          </div>
+          <h3>Personal AI Chatbot</h3>
+          <p>An AI-powered chatbot connected to Hugging Face that answers questions about my background, work, and interests in real time.</p>
+          <a href="#" class="project-link" onclick="openChat()">Try Chatbot →</a>
+        </div>
+      </div>
+
+      <div class="project-card" style="border-style:dashed;opacity:0.65">
+        <div class="project-thumb t1">➕</div>
+        <div class="project-body">
+          <div class="project-tags"><span class="project-tag">Coming Soon</span></div>
+          <h3>More Projects Loading...</h3>
+          <p>Currently working on exciting new projects. Check back soon or reach out to collaborate!</p>
+          <a href="#" class="project-link" onclick="showPage('contact')">Collaborate →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>Crafted with ❤️ by <span>Niroj Gyawali</span> · Lumbini, Nepal</footer>
+</div>
+
+<!-- ════════════════ CONTACT PAGE ════════════════ -->
+<div id="page-contact" class="page">
+  <div class="section">
+    <div class="section-label">Let's Connect</div>
+    <h2 class="section-title">Get In Touch</h2>
+    <p class="section-subtitle">Have a project idea, want to collaborate, or just want to say hello? I'm always open to conversations.</p>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Let's build something together</h3>
+        <p>
+          Whether you're a fellow student, a developer, or someone curious about AI — 
+          I'd love to connect. Drop me a message and I'll get back to you as soon as possible.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:niroj@example.com" class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div class="contact-item-text">
+              <strong>Email</strong>
+              <span>niroj@example.com</span>
+            </div>
+          </a>
+          <a href="#" class="contact-item">
+            <div class="contact-icon">💼</div>
+            <div class="contact-item-text">
+              <strong>LinkedIn</strong>
+              <span>linkedin.com/in/nirojgyawali</span>
+            </div>
+          </a>
+          <a href="#" class="contact-item">
+            <div class="contact-icon">🐙</div>
+            <div class="contact-item-text">
+              <strong>GitHub</strong>
+              <span>github.com/nirojgyawali</span>
+            </div>
+          </a>
+          <a href="#" class="contact-item">
+            <div class="contact-icon">🌐</div>
+            <div class="contact-item-text">
+              <strong>Lumbini Tech Month</strong>
+              <span>Lumbini Province, Nepal</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;margin-bottom:1.5rem;">Send a Message</h3>
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" placeholder="What should I call you?" id="cf-name"/>
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="your@email.com" id="cf-email"/>
+        </div>
+        <div class="form-group">
+          <label>Subject</label>
+          <input type="text" placeholder="What's this about?" id="cf-subject"/>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea placeholder="Tell me more..." id="cf-message"></textarea>
+        </div>
+        <button class="btn btn-primary" style="width:100%;justify-content:center" onclick="sendMessage()">
+          Send Message ✉️
+        </button>
+        <p id="form-status" style="text-align:center;font-size:0.82rem;margin-top:0.75rem;color:var(--accent2);display:none;">
+          ✅ Message sent! I'll get back to you soon.
+        </p>
+      </div>
+    </div>
+  </div>
+  <footer>Crafted with ❤️ by <span>Niroj Gyawali</span> · Lumbini, Nepal</footer>
+</div>
+
+<!-- ════════════════ CHATBOT ════════════════ -->
+<!-- Chat window is OUTSIDE chatbot-launcher and fixed to viewport -->
+<div class="chat-window" id="chatWindow">
+  <div class="chat-header">
+    <div class="chat-header-avatar">N</div>
+    <div class="chat-header-info">
+      <strong>Niroj's AI Assistant</strong>
+      <span>Powered by AI · Always here</span>
+    </div>
+    <button class="chat-header-close" onclick="closeChat()">✕</button>
+  </div>
+  <div class="chat-messages" id="chatMessages">
+    <div class="msg bot">
+      <div class="msg-avatar">🤖</div>
+      <div class="msg-bubble">
+        Hi there! 👋 I'm Niroj's AI assistant. Ask me anything about Niroj — his background, skills, projects, or just say hi!
+      </div>
+    </div>
+  </div>
+  <div class="suggestions" id="suggestions">
+    <span class="suggestion" onclick="suggestMsg(this)">Who is Niroj?</span>
+    <span class="suggestion" onclick="suggestMsg(this)">What time is it?</span>
+    <span class="suggestion" onclick="suggestMsg(this)">Today's date?</span>
+    <span class="suggestion" onclick="suggestMsg(this)">His projects?</span>
+  </div>
+  <div class="chat-input-area">
+    <input type="text" class="chat-input" id="chatInput" placeholder="Ask me anything..." onkeydown="if(event.key==='Enter')sendChat()"/>
+    <button class="chat-send" onclick="sendChat()">➤</button>
+  </div>
+</div>
+
+<div class="chatbot-launcher">
+  <button class="chat-toggle" onclick="toggleChat()" id="chatToggle">
+    💬
+    <span class="badge"></span>
+  </button>
+</div>
+
+<script>
+// ── PAGE NAVIGATION ──
+function showPage(name) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + name).classList.add('active');
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.classList.toggle('active', a.dataset.page === name);
+  });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ── NAVBAR SCROLL ──
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
+});
+
+// ── CONTACT FORM ──
+function sendMessage() {
+  const name = document.getElementById('cf-name').value;
+  const email = document.getElementById('cf-email').value;
+  const msg = document.getElementById('cf-message').value;
+  if (!name || !email || !msg) { alert('Please fill in all required fields.'); return; }
+  const status = document.getElementById('form-status');
+  status.style.display = 'block';
+  document.getElementById('cf-name').value = '';
+  document.getElementById('cf-email').value = '';
+  document.getElementById('cf-subject').value = '';
+  document.getElementById('cf-message').value = '';
+}
+
+// ── CHATBOT ──
+let chatOpen = false;
+
+function toggleChat() {
+  chatOpen = !chatOpen;
+  const win = document.getElementById('chatWindow');
+  const btn = document.getElementById('chatToggle');
+  win.classList.toggle('open', chatOpen);
+  btn.innerHTML = chatOpen ? '✕<span class="badge"></span>' : '💬<span class="badge"></span>';
+  if (chatOpen) document.getElementById('chatInput').focus();
+}
+function openChat() {
+  if (!chatOpen) toggleChat();
+}
+function closeChat() {
+  if (chatOpen) toggleChat();
+}
+
+function suggestMsg(el) {
+  document.getElementById('chatInput').value = el.textContent;
+  sendChat();
+}
+
+// Navigation keywords
+const navKeywords = {
+  about: ['about', 'niroj', 'who is', 'background', 'person', 'biography', 'lumbini tech month'],
+  projects: ['project', 'built', 'work', 'portfolio', 'code'],
+  contact: ['contact', 'email', 'reach', 'connect', 'message']
+};
+
+// AI Knowledge base about Niroj
+const knowledge = {
+  niroj: "Niroj Gyawali is a first-semester BSc CSIT student passionate about Artificial Intelligence and Machine Learning. He's from Lumbini, Nepal, and is actively involved in tech community building.",
+  skills: "Niroj is skilled in Python, Machine Learning, Deep Learning, Data Science, and Web Development. He's currently expanding his knowledge in AI/ML and data-driven projects.",
+  education: "Niroj is currently in the 1st semester of BSc CSIT (Bachelor of Science in Computer Science and Information Technology).",
+  lumbini: "Niroj is an organizer of Lumbini Tech Month — a regional tech initiative in Lumbini Province, Nepal, where participants learn different IT-related courses and skills.",
+  projects: "Niroj has worked on a Sentiment Analysis Model, Data Visualization Dashboard, and the Lumbini Tech Month initiative. He's also building this AI-powered portfolio chatbot!",
+  contact: "You can reach Niroj via email at niroj@example.com, on LinkedIn at linkedin.com/in/nirojgyawali, or on GitHub at github.com/nirojgyawali.",
+  interests: "Niroj is deeply interested in AI, Machine Learning, and various IT-related projects. He's passionate about using technology to create meaningful change in his community.",
+};
+
+function getLocalResponse(text) {
+  const t = text.toLowerCase();
+  const now = new Date();
+
+  if (t.includes('time') || t.includes('what time')) {
+    return "🕐 Current time: <strong>" + now.toLocaleTimeString('en-US', {hour:'2-digit', minute:'2-digit', second:'2-digit'}) + "</strong>";
+  }
+  if (t.includes('today') && (t.includes('date') || t.includes('day'))) {
+    return "📅 Today is <strong>" + now.toLocaleDateString('en-US', {weekday:'long', year:'numeric', month:'long', day:'numeric'}) + "</strong>";
+  }
+  if (t.includes('date') || t.includes('what day') || t.includes('which date')) {
+    return "📅 Today's date is <strong>" + now.toLocaleDateString('en-US', {weekday:'long', year:'numeric', month:'long', day:'numeric'}) + "</strong>";
+  }
+  if (t.includes('day') && (t.includes('today') || t.includes('current') || t.includes('which'))) {
+    return "📆 Today is <strong>" + now.toLocaleDateString('en-US', {weekday:'long'}) + "</strong>, " + now.toLocaleDateString('en-US', {month:'long', day:'numeric', year:'numeric'});
+  }
+  if (t.includes('year')) {
+    return "📅 The current year is <strong>" + now.getFullYear() + "</strong>.";
+  }
+  if (t.includes('month')) {
+    return "📅 The current month is <strong>" + now.toLocaleDateString('en-US', {month:'long'}) + "</strong>.";
+  }
+  if (t.includes('good morning') || t.includes('good afternoon') || t.includes('good evening') || t.includes('good night')) {
+    const hour = now.getHours();
+    const greeting = hour < 12 ? "Good morning" : hour < 17 ? "Good afternoon" : hour < 21 ? "Good evening" : "Good night";
+    return greeting + "! 👋 Hope you're having a great " + now.toLocaleDateString('en-US', {weekday:'long'}) + "! How can I help you?";
+  }
+  if (t.includes('hello') || t.includes('hi') || t.includes('hey')) {
+    return "Hello! 👋 I'm Niroj's AI assistant. Ask me anything — about Niroj, or anything else like the time, date, coding questions, and more!";
+  }
+  if (t.includes('who is niroj') || t.includes('tell me about niroj') || t.includes('about niroj')) return knowledge.niroj;
+  if (t.includes('skill') || t.includes('tech stack')) return knowledge.skills;
+  if (t.includes('education') || t.includes('study') || t.includes('college') || t.includes('csit') || t.includes('student')) return knowledge.education;
+  if (t.includes('lumbini') || t.includes('tech month') || t.includes('organiz')) return knowledge.lumbini;
+  if (t.includes('contact') || t.includes('email') || t.includes('reach') || t.includes('linkedin') || t.includes('github')) return knowledge.contact;
+  if (t.includes('interest') || t.includes('hobby') || t.includes('passion')) return knowledge.interests;
+
+  return null;
+}
+
+function detectNavigation(text) {
+  const t = text.toLowerCase();
+  for (const [page, words] of Object.entries(navKeywords)) {
+    if (words.some(w => t.includes(w))) return page;
+  }
+  return null;
+}
+
+async function sendChat() {
+  const input = document.getElementById('chatInput');
+  const text = input.value.trim();
+  if (!text) return;
+
+  input.value = '';
+  appendMsg('user', text);
+  document.getElementById('suggestions').style.display = 'none';
+
+  const typingId = appendTyping();
+  const navTo = detectNavigation(text);
+
+  try {
+    const reply = await callHuggingFace(text);
+    removeTyping(typingId);
+    appendMsg('bot', reply);
+    if (navTo) {
+      setTimeout(() => {
+        appendMsg('bot', `📌 Opening the <strong>${navTo}</strong> section for you...`);
+        setTimeout(() => showPage(navTo), 800);
+      }, 600);
+    }
+  } catch(e) {
+    removeTyping(typingId);
+    const localReply = getLocalResponse(text);
+    if (localReply) {
+      appendMsg('bot', localReply + "<br><small style='color:var(--text3)'>⚡ offline mode</small>");
+    } else {
+      appendMsg('bot', "⚠️ Cannot reach the AI backend. Make sure <code>uvicorn main:app --reload --port 8000</code> is running and your HF token is in <code>.env</code>.");
+    }
+    console.error("Backend error:", e);
+  }
+}
+
+const BACKEND_URL = "";
+let chatHistory = [];
+
+async function callHuggingFace(userText) {
+  const response = await fetch(`${BACKEND_URL}/chat`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      message: userText,
+      history: chatHistory
+    })
+  });
+
+  if (!response.ok) {
+    const err = await response.json();
+    if (response.status === 503) {
+      return "⏳ The AI model is warming up (this takes ~20 seconds on first load). Please try again in a moment!";
+    }
+    throw new Error(err.detail || "Backend error");
+  }
+
+  const data = await response.json();
+  chatHistory.push({ role: "user", content: userText });
+  chatHistory.push({ role: "assistant", content: data.reply });
+  if (chatHistory.length > 20) chatHistory = chatHistory.slice(-20);
+
+  return data.reply;
+}
+
+function appendMsg(role, html) {
+  const msgs = document.getElementById('chatMessages');
+  const div = document.createElement('div');
+  div.className = `msg ${role}`;
+  div.innerHTML = `
+    <div class="msg-avatar">${role === 'bot' ? '🤖' : 'You'}</div>
+    <div class="msg-bubble">${html}</div>
+  `;
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+let typingCounter = 0;
+function appendTyping() {
+  const id = 'typing-' + (++typingCounter);
+  const msgs = document.getElementById('chatMessages');
+  const div = document.createElement('div');
+  div.className = 'msg bot';
+  div.id = id;
+  div.innerHTML = `
+    <div class="msg-avatar">🤖</div>
+    <div class="msg-bubble">
+      <div class="typing-indicator">
+        <div class="typing-dot"></div>
+        <div class="typing-dot"></div>
+        <div class="typing-dot"></div>
+      </div>
+    </div>
+  `;
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+  return id;
+}
+function removeTyping(id) {
+  const el = document.getElementById(id);
+  if (el) el.remove();
+}
+</script>
+</body>
+</html>
